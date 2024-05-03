@@ -1,0 +1,23 @@
+.calendar-section {
+    width: 50%;
+    background-color: rgb(238, 238, 238);
+    border-top-left-radius: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 30px 20px;
+}
+
+.calendar-section .title {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.calendar-section .timezone >span:first-child{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.calendar-section .timezone >span:last-child{
+    font-size: 14px;
+}
