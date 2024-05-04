@@ -3,18 +3,22 @@ import { FaChevronDown } from "react-icons/fa";
 
 import "../../styles/ui/Dropdown.css"; // Import CSS file for styling
 
-export const CustomDropdown = ({ options, onSelect }) => {
+export const CustomDropdown = ({
+  options,
+  onSelect,
+  selectedVariant,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(
-    options?.[0].value || ""
-  );
+  // const [selectedOption, setSelectedOption] = useState(
+  //   options?.[0] || ""
+  // );
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   const handleOptionClick = (option) => {
-    setSelectedOption(option);
+    onSelect(option);
     onSelect(option);
     setIsOpen(false);
   };
@@ -22,7 +26,7 @@ export const CustomDropdown = ({ options, onSelect }) => {
   return (
     <div className="custom-dropdown">
       <div className="dropdown-header" onClick={handleToggle}>
-        {selectedOption || "Select an option"}
+        {selectedVariant?.label || "Select an option"}
         <span className={`arrow ${isOpen ? "open" : "closed"}`}>
           <FaChevronDown />
         </span>
@@ -32,7 +36,7 @@ export const CustomDropdown = ({ options, onSelect }) => {
           {options.map((option) => (
             <li
               key={option.value}
-              onClick={() => handleOptionClick(option.value)}
+              onClick={() => handleOptionClick(option)}
             >
               {option.label}
             </li>
