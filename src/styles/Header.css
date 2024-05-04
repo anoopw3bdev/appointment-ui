@@ -21,8 +21,10 @@
     display: flex;
 }
 
-.navigation ul li {
+.navigation li {
     margin-left: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .navigation ul li:first-child {
@@ -32,8 +34,10 @@
 .share-button {
     border: 1px solid lightgray;
     padding: 6px 14px;
-    width: 300px;
     border-radius: 26px;
     border-color: green;
     color: green;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
 }

@@ -5,6 +5,9 @@
     box-sizing: border-box;
     height: 100%;
     padding: 30px 20px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
 }
 
 .calendar-section .title {
@@ -20,17 +23,19 @@
 
 .calendar-section .timezone >span:last-child {
     font-size: 14px;
+    font-weight: 500;
+    color: gray;
 }
 
 .calendar-section .calendar-wrapper {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .calendar-section .react-calendar {
     border: none;
     width: 370px;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .calendar-section .react-calendar__navigation__next2-button,
@@ -61,6 +66,6 @@
     color: aliceblue;
 }
 
-.react-calendar__month-view__days__day--weekend {
+.calendar-section .react-calendar__month-view__days__day--weekend {
     color: black;
 }

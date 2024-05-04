@@ -1,4 +1,6 @@
-import "../styles/Header.css"
+import { CiShare1 } from "react-icons/ci";
+
+import "../styles/Header.css";
 
 export const Header = () => {
   return (
@@ -9,11 +11,26 @@ export const Header = () => {
       </div>
       <nav className="navigation">
         <ul className="menu">
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Contact us</a></li>
-          <li><a className="share-button" href="#">Share link</a></li>
+          <li>
+            <a href="#">Menu</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+          <li>
+            <a className="share-button" href="#">
+              <CiShare1
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "bold",
+                  strokeWidth: 1.1,
+                }}
+              />
+              Share link
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
