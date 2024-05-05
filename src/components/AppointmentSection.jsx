@@ -9,7 +9,7 @@ import { getTimeSlotsUrl } from "../constants/url";
 import { groupMeetingsByDuration } from "../utils/groupMeetingByDuration";
 
 export const AppointmentSection = () => {
-  const [selectedVariant, setSelectedVariant] = useState(variants[0]);
+  const [selectedVariant, setSelectedVariant] = useState(variants[2]);
 
   const dateObject = getDateRange();
   const url = getTimeSlotsUrl(
@@ -22,6 +22,7 @@ export const AppointmentSection = () => {
   let timeSlots = {};
   if (data?.length) {
     timeSlots = { ...groupMeetingsByDuration(data?.[0].slots) } || [];
+    timeSlots = timeSlots[selectedVariant?.value];
   }
 
   const onVariantSelect = (val) => {

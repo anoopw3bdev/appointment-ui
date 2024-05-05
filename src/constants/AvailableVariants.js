@@ -1,14 +1,14 @@
 export const variants = [
   {
-    value: "30_minutes",
+    value: "30",
     label: "30 min",
   },
   {
-    value: "60_minutes",
-    label: "1 hour",
+    value: "45",
+    label: "45 min",
   },
   {
-    value: "45_minutes",
-    label: "45 min",
+    value: "60",
+    label: "1 hour",
   },
 ];
