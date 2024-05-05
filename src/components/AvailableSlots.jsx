@@ -2,18 +2,19 @@ import { useState } from "react";
 
 import "../styles/AvailableSlots.css";
 import { TimeSlot } from "./ui/TimeSlot";
+import { formatToGetDay } from "../utils/formatToGetDay";
 
 export const AvailableSlots = ({ data = {}, timeSlots = [] }) => {
-  const [selectedSlot, setSelectedSlot] = useState(1);
+  const [selectedSlot, setSelectedSlot] = useState(0);
 
   return (
     <div className="available-slots">
       <div className="slot-details">
         <p>
-          {data?.[0]?.date} -{" "}
+          {formatToGetDay(data?.[0]?.date)} -{" "}
           {timeSlots?.length
-            ? `${timeSlots.length} avaialable slots`
-            : `No avaialable slots `}
+            ? `${timeSlots.length} available slots`
+            : `No available slots `}
         </p>
         <div className="slot-cards">
           {!!timeSlots?.length &&
@@ -23,6 +24,7 @@ export const AvailableSlots = ({ data = {}, timeSlots = [] }) => {
                 slot={slot}
                 selected={selectedSlot}
                 onClick={setSelectedSlot}
+                currentId={index}
               />
             ))}
         </div>

@@ -3,7 +3,7 @@ import { useFetchData } from "../hooks/useFetchData";
 import { VariantSelection } from "./VariantSelection";
 import { AvailableSlots } from "./AvailableSlots";
 import "../styles/AppointmentSection.css";
-import { variants } from "../constants/AvailableVariants";
+import { variants } from "../constants/availableVariants";
 import { getDateRange } from "../utils/getCurrentDate";
 import { getTimeSlotsUrl } from "../constants/url";
 import { groupMeetingsByDuration } from "../utils/groupMeetingByDuration";
