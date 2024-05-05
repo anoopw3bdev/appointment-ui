@@ -1,5 +1,5 @@
 import { CiCircleCheck } from "react-icons/ci";
-
+import { formatToGetTime } from "../../utils/formatToGetTime";
 import "../../styles/ui/TimeSlot.css";
 
 export const TimeSlot = ({ slot, selected, onClick = () => {} }) => {
@@ -8,7 +8,8 @@ export const TimeSlot = ({ slot, selected, onClick = () => {} }) => {
       className={`slot ${selected === slot.id ? "selected" : ""}`}
       onClick={() => onClick(slot.id)}
     >
-      {slot.time}
+      {formatToGetTime(slot?.start_time)} -{" "}
+      {formatToGetTime(slot?.end_time)}
       {selected === slot.id && (
         <CiCircleCheck
           style={{

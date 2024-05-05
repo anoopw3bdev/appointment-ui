@@ -4,7 +4,7 @@ export const useFetchData = (url) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  console.log("running");
+
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
