@@ -18,3 +18,16 @@ main >div {
     margin-right: auto;
     display: flex;
 }
+
+@media only screen and (max-width: 767px) {
+    .calendar-container {
+        width: 90vw;
+        flex-direction: column;
+    }
+}
+    
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .calendar-container {
+        min-width: 90vw;
+    }
+}
