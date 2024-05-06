@@ -8,7 +8,9 @@ export const CalendarSection = ({ setCurrentUrl }) => {
         <div className="title">Test Service</div>
         <div className="timezone">
           <span>Timezone:</span>
-          <span>&nbsp;Asia/ Calcutta</span>
+          <span>
+            &nbsp;{Intl.DateTimeFormat().resolvedOptions().timeZone}
+          </span>
         </div>
       </div>
       <div className="calendar-wrapper">
