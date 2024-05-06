@@ -40,3 +40,7 @@
     align-items: center;
     column-gap: 6px;
 }
+
+.navigation li a {
+    text-decoration: none;
+}
