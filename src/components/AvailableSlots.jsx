@@ -14,12 +14,17 @@ export const AvailableSlots = ({
   return (
     <div className="available-slots">
       <div className="slot-details">
-        <p>
-          {formatToGetDay(data?.[0]?.date)} -{" "}
-          {timeSlots?.length
-            ? `${timeSlots.length} available slots`
-            : `No available slots for ${selectedVariant?.label}`}
-        </p>
+        {data ? (
+          <p>
+            {formatToGetDay(data?.[0]?.date)} -{" "}
+            {timeSlots?.length
+              ? `${timeSlots.length} available slots`
+              : `No available slots for ${selectedVariant?.label}`}
+          </p>
+        ) : (
+          <p>Something went wrong!</p>
+        )}
+
         <div className="slot-cards">
           {!!timeSlots?.length &&
             timeSlots?.map((slot, index) => (
