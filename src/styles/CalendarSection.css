@@ -3,11 +3,7 @@
     background-color: rgb(238, 238, 238);
     border-top-left-radius: 10px;
     box-sizing: border-box;
-    height: 100%;
     padding: 30px 20px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
 }
 
 .calendar-section .title {
