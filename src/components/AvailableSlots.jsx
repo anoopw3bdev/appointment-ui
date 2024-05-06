@@ -5,7 +5,7 @@ import { TimeSlot } from "./ui/TimeSlot";
 import { formatToGetDay } from "../utils/formatToGetDay";
 
 export const AvailableSlots = ({ data = {}, timeSlots = [] }) => {
-  const [selectedSlot, setSelectedSlot] = useState(0);
+  const [selectedSlot, setSelectedSlot] = useState(null);
 
   return (
     <div className="available-slots">
