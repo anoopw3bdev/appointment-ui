@@ -1,23 +1,12 @@
 import { useState } from "react";
-import { useFetchData } from "../hooks/useFetchData";
 import { VariantSelection } from "./VariantSelection";
 import { AvailableSlots } from "./AvailableSlots";
 import "../styles/AppointmentSection.css";
 import { variants } from "../constants/availableVariants";
-import { getDateRange } from "../utils/getCurrentDate";
-import { getTimeSlotsUrl } from "../constants/url";
 import { groupMeetingsByDuration } from "../utils/groupMeetingByDuration";
 
-export const AppointmentSection = () => {
+export const AppointmentSection = ({ data, isLoading }) => {
   const [selectedVariant, setSelectedVariant] = useState(variants[2]);
-
-  const dateObject = getDateRange();
-  const url = getTimeSlotsUrl(
-    dateObject?.currentDate,
-    dateObject?.nextDate
-  );
-
-  const { data, isLoading } = useFetchData(url);
 
   let timeSlots = {};
   if (data?.length) {
@@ -40,7 +29,11 @@ export const AppointmentSection = () => {
             selectedVariant={selectedVariant}
             onSelect={onVariantSelect}
           />
-          <AvailableSlots data={data} timeSlots={timeSlots} />
+          <AvailableSlots
+            data={data}
+            timeSlots={timeSlots}
+            selectedVariant={selectedVariant}
+          />
         </>
       )}
     </div>

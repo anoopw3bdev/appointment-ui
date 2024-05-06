@@ -1,7 +1,7 @@
 import { CalendarComponent } from "./Calendar";
 import "../styles/CalendarSection.css";
 
-export const CalendarSection = () => {
+export const CalendarSection = ({ setCurrentUrl }) => {
   return (
     <div className="calendar-section">
       <div>
@@ -12,7 +12,7 @@ export const CalendarSection = () => {
         </div>
       </div>
       <div className="calendar-wrapper">
-        <CalendarComponent />
+        <CalendarComponent setCurrentUrl={setCurrentUrl} />
       </div>
     </div>
   );

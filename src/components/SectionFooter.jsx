@@ -6,7 +6,10 @@ export const SectionFooter = () => {
       <footer className="section-footer">
         <div>
           <span className="description">
-            POWERED BY <a href="https://www.appointo.me/">APPOINTO</a>
+            POWERED BY{" "}
+            <a href="https://www.appointo.me/" target="_blank">
+              APPOINTO
+            </a>
           </span>
         </div>
         <Button text="Next" />

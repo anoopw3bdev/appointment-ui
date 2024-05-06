@@ -4,7 +4,11 @@ import "../styles/AvailableSlots.css";
 import { TimeSlot } from "./ui/TimeSlot";
 import { formatToGetDay } from "../utils/formatToGetDay";
 
-export const AvailableSlots = ({ data = {}, timeSlots = [] }) => {
+export const AvailableSlots = ({
+  data = {},
+  timeSlots = [],
+  selectedVariant,
+}) => {
   const [selectedSlot, setSelectedSlot] = useState(null);
 
   return (
@@ -14,7 +18,7 @@ export const AvailableSlots = ({ data = {}, timeSlots = [] }) => {
           {formatToGetDay(data?.[0]?.date)} -{" "}
           {timeSlots?.length
             ? `${timeSlots.length} available slots`
-            : `No available slots `}
+            : `No available slots for ${selectedVariant?.label}`}
         </p>
         <div className="slot-cards">
           {!!timeSlots?.length &&

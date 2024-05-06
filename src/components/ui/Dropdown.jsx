@@ -9,9 +9,6 @@ export const CustomDropdown = ({
   selectedVariant,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [selectedOption, setSelectedOption] = useState(
-  //   options?.[0] || ""
-  // );
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
