@@ -1,0 +1,16 @@
+.section-footer {
+    padding: 0 20px;
+    background-color: #26874E;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.section-footer .description {
+    font-size: 14px;
+    font-weight: 500;
+    color: aliceblue;
+}
