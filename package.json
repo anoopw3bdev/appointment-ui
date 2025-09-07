@@ -1,5 +1,5 @@
 {
-  "name": "sidepanda",
+  "name": "appointment-ui",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "homepage": "https://anoopw3bdev.github.io/sidepanda/"
+    "homepage": "https://anoopw3bdev.github.io/appointment-ui/"
   },
   "dependencies": {
     "react": "^18.2.0",
